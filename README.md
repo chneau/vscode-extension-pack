@@ -1,1 +1,1 @@
-# vscode-extension-pack
+# extension-pack

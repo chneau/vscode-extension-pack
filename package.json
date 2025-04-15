@@ -1,0 +1,43 @@
+{
+	"name": "chneau-extension-pack",
+	"displayName": "chneau-extension-pack",
+	"description": "Chneau's extension pack",
+	"version": "0.0.1",
+	"publisher": "chneau",
+	"license": "MIT",
+	"scripts": {
+		"publish": "vsce publish"
+	},
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"galleryBanner": {
+		"color": "#1E1E1E",
+		"theme": "dark"
+	},
+	"keywords": ["dark"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chneau/vscode-extension-pack"
+	},
+	"categories": ["Extension Packs"],
+	"extensionPack": [
+		"biomejs.biome",
+		"chneau.resource-monitor",
+		"chneau.saturated-dark-modern",
+		"dakara.transformer",
+		"esbenp.prettier-vscode",
+		"GitHub.copilot",
+		"golang.go",
+		"grapecity.gc-excelviewer",
+		"ms-dotnettools.csharp",
+		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"ms-vscode.vscode-typescript-next",
+		"oven.bun-vscode",
+		"jebbs.plantuml",
+		"Prisma.prisma",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"yoavbls.pretty-ts-errors"
+	]
+}
