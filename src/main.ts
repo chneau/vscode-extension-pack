@@ -3,7 +3,17 @@ import config from "./vscode.json";
 
 export const activate = () =>
 	Promise.all(
-		Object.entries(config).map(([key, value]) =>
-			workspace.getConfiguration().update(key, value, true),
-		),
+		Object.entries(config).map(async ([key, value]) => {
+			const set = async () =>
+				workspace.getConfiguration().update(key, value, true);
+			while (true) {
+				try {
+					await set();
+					return;
+				} catch (e) {
+					console.error(`Failed to set configuration for ${key}:`, e);
+					await new Promise((resolve) => setTimeout(resolve, 1000));
+				}
+			}
+		}),
 	);
