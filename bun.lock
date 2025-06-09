@@ -4,10 +4,10 @@
     "": {
       "name": "chneau-extension-pack",
       "devDependencies": {
-        "@types/node": "^22.15.30",
-        "@types/vscode": "^1.100.0",
-        "esbuild": "^0.25.5",
-        "typescript": "^5.8.3",
+        "@types/node": "latest",
+        "@types/vscode": "latest",
+        "esbuild": "latest",
+        "typescript": "latest",
       },
     },
   },
