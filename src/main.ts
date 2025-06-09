@@ -6,7 +6,7 @@ export const activate = () =>
 		Object.entries(config).map(async ([key, value]) => {
 			const set = async () =>
 				workspace.getConfiguration().update(key, value, true);
-			while (true) {
+			for (let i = 0; i < 30; i++) {
 				try {
 					await set();
 					return;
