@@ -1,43 +1,63 @@
 {
-	"name": "chneau-extension-pack",
-	"displayName": "chneau-extension-pack",
-	"description": "Chneau's extension pack",
-	"version": "0.0.1",
-	"publisher": "chneau",
-	"license": "MIT",
-	"scripts": {
-		"publish": "vsce publish"
-	},
-	"engines": {
-		"vscode": "^1.90.0"
-	},
-	"galleryBanner": {
-		"color": "#1E1E1E",
-		"theme": "dark"
-	},
-	"keywords": ["dark"],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chneau/vscode-extension-pack"
-	},
-	"categories": ["Extension Packs"],
-	"extensionPack": [
-		"biomejs.biome",
-		"chneau.resource-monitor",
-		"chneau.saturated-dark-modern",
-		"dakara.transformer",
-		"esbenp.prettier-vscode",
-		"GitHub.copilot",
-		"golang.go",
-		"grapecity.gc-excelviewer",
-		"ms-dotnettools.csharp",
-		"ms-python.python",
-		"ms-toolsai.jupyter",
-		"ms-vscode.vscode-typescript-next",
-		"oven.bun-vscode",
-		"jebbs.plantuml",
-		"Prisma.prisma",
-		"VisualStudioExptTeam.vscodeintellicode",
-		"yoavbls.pretty-ts-errors"
-	]
+  "name": "chneau-extension-pack",
+  "displayName": "chneau-extension-pack",
+  "description": "Chneau's extension pack",
+  "version": "0.0.3",
+  "publisher": "chneau",
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
+  "keywords": [
+    "chneau",
+    "auto-setup",
+    "personal",
+    "settings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chneau/vscode-extension-pack"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/main.js",
+  "scripts": {
+    "build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
+    "upgrade": "bun update --latest",
+    "publish": "bun run build && vsce package && vsce publish",
+    "all": "bun run upgrade; bun run check; bun run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/vscode": "^1.100.0",
+    "esbuild": "^0.25.5",
+    "typescript": "^5.8.3"
+  },
+  "extensionPack": [
+    "biomejs.biome",
+    "chneau.resource-monitor",
+    "chneau.saturated-dark-modern",
+    "dakara.transformer",
+    "esbenp.prettier-vscode",
+    "GitHub.copilot",
+    "golang.go",
+    "grapecity.gc-excelviewer",
+    "ms-dotnettools.csharp",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-vscode.vscode-typescript-next",
+    "oven.bun-vscode",
+    "jebbs.plantuml",
+    "Prisma.prisma",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "yoavbls.pretty-ts-errors"
+  ]
 }
