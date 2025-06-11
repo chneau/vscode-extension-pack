@@ -69,7 +69,6 @@
 	"go.toolsManagement.autoUpdate": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"notebook.formatOnSave.enabled": true,
-	"remote.SSH.remotePlatform": { "ncce": "linux" },
 	"security.promptForRemoteFileProtocolHandling": false,
 	"security.workspace.trust.enabled": false,
 	"telemetry.telemetryLevel": "off",

@@ -2,7 +2,7 @@
 	"name": "chneau-extension-pack",
 	"displayName": "chneau-extension-pack",
 	"description": "Chneau's extension pack",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"publisher": "chneau",
 	"license": "MIT",
 	"galleryBanner": {
@@ -24,12 +24,12 @@
 		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
 		"upgrade": "bun update --latest",
 		"publish": "bun run build && vsce package && vsce publish",
-		"all": "bun run upgrade; bun run check; bun run lint",
+		"all": "rm -rf out; bun run upgrade; bun run check; bun run lint",
 		"check": "deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
 		"lint": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.30",
+		"@types/node": "^24.0.0",
 		"@types/vscode": "^1.100.0",
 		"esbuild": "^0.25.5",
 		"typescript": "^5.8.3"
