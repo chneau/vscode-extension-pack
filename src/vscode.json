@@ -64,6 +64,7 @@
 	"git.postCommitCommand": "sync",
 	"github.copilot.nextEditSuggestions.enabled": true,
 	"go.toolsManagement.autoUpdate": true,
+	"intellicodeApiExamples.typescript.enabled": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"notebook.formatOnSave.enabled": true,
 	"security.promptForRemoteFileProtocolHandling": false,
