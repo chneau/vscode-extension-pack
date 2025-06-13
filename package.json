@@ -2,7 +2,7 @@
 	"name": "chneau-extension-pack",
 	"displayName": "chneau-extension-pack",
 	"description": "Chneau's extension pack",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"publisher": "chneau",
 	"license": "MIT",
 	"galleryBanner": {
@@ -15,7 +15,7 @@
 		"url": "https://github.com/chneau/vscode-extension-pack"
 	},
 	"engines": {
-		"vscode": "^1.100.0"
+		"vscode": "^1.101.0"
 	},
 	"categories": ["Extension Packs"],
 	"activationEvents": ["onStartupFinished"],
@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.0.1",
-		"@types/vscode": "^1.100.0",
+		"@types/vscode": "^1.101.0",
 		"esbuild": "^0.25.5",
 		"typescript": "^5.8.3"
 	},
