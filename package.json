@@ -20,8 +20,9 @@
 	"categories": ["Extension Packs"],
 	"activationEvents": ["onStartupFinished"],
 	"main": "./out/main.js",
+	"browser": "./out/main.js",
 	"scripts": {
-		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
+		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=neutral --minify",
 		"upgrade": "bun update --latest",
 		"publish": "bun run build && vsce package && vsce publish",
 		"all": "rm -rf out; bun run upgrade; bun run check; bun run lint",
