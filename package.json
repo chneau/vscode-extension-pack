@@ -2,14 +2,19 @@
 	"name": "chneau-extension-pack",
 	"displayName": "chneau-extension-pack",
 	"description": "Chneau's extension pack",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"publisher": "chneau",
 	"license": "MIT",
 	"galleryBanner": {
 		"color": "#1E1E1E",
 		"theme": "dark"
 	},
-	"keywords": ["chneau", "auto-setup", "personal", "settings"],
+	"keywords": [
+		"chneau",
+		"auto-setup",
+		"personal",
+		"settings"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/chneau/vscode-extension-pack"
@@ -17,12 +22,16 @@
 	"engines": {
 		"vscode": "^1.101.0"
 	},
-	"categories": ["Extension Packs"],
-	"activationEvents": ["onStartupFinished"],
+	"categories": [
+		"Extension Packs"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
 	"main": "./out/main.js",
 	"browser": "./out/main.js",
 	"scripts": {
-		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=neutral --minify",
+		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
 		"upgrade": "bun update --latest",
 		"publish": "bun run build && vsce package && vsce publish",
 		"all": "rm -rf out; bun run upgrade; bun run check; bun run lint",
@@ -30,7 +39,7 @@
 		"lint": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@types/node": "^24.0.1",
+		"@types/node": "^24.0.3",
 		"@types/vscode": "^1.101.0",
 		"esbuild": "^0.25.5",
 		"typescript": "^5.8.3"
