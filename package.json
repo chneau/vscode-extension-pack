@@ -2,7 +2,7 @@
 	"name": "chneau-extension-pack",
 	"displayName": "chneau-extension-pack",
 	"description": "Chneau's extension pack",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"publisher": "chneau",
 	"license": "MIT",
 	"galleryBanner": {
@@ -20,7 +20,7 @@
 		"url": "https://github.com/chneau/vscode-extension-pack"
 	},
 	"engines": {
-		"vscode": "^1.104.0"
+		"vscode": "^1.99.0"
 	},
 	"categories": [
 		"Extension Packs"
@@ -32,7 +32,7 @@
 	"browser": "./out/main.js",
 	"scripts": {
 		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
-		"upgrade": "bun update --latest",
+		"upgrade": "bun update --latest; bun install --dev @types/vscode@1.99.0",
 		"publish": "bun run build && vsce package && vsce publish",
 		"all": "rm -rf out; bun run upgrade; bun run check; bun run lint",
 		"check": "deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
@@ -40,7 +40,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.5.2",
-		"@types/vscode": "^1.104.0",
+		"@types/vscode": "1.99.0",
 		"esbuild": "^0.25.10",
 		"typescript": "^5.9.2"
 	},
