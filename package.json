@@ -2,7 +2,7 @@
 	"name": "chneau-extension-pack",
 	"displayName": "chneau-extension-pack",
 	"description": "Chneau's extension pack",
-	"version": "0.0.14",
+	"version": "0.0.16",
 	"publisher": "chneau",
 	"license": "MIT",
 	"galleryBanner": {
@@ -34,15 +34,16 @@
 		"build": "esbuild ./src/main.ts --outfile=out/main.js --bundle --external:vscode --platform=node --minify",
 		"upgrade": "bun update --latest; bun install --dev @types/vscode@1.99.0",
 		"publish": "bun run build && vsce package && vsce publish",
-		"all": "rm -rf out; bun run upgrade; bun run check; bun run lint",
+		"all": "bun run upgrade; bun run check; bun run lint",
 		"check": "deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
 		"lint": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@types/node": "^24.5.2",
+		"@types/node": "^24.10.1",
 		"@types/vscode": "1.99.0",
-		"esbuild": "^0.25.10",
-		"typescript": "^5.9.2"
+		"@vscode/vsce": "^3.7.0",
+		"esbuild": "^0.27.0",
+		"typescript": "^5.9.3"
 	},
 	"extensionPack": [
 		"biomejs.biome",
@@ -50,17 +51,16 @@
 		"chneau.saturated-dark-modern",
 		"dakara.transformer",
 		"esbenp.prettier-vscode",
-		"GitHub.copilot",
+		"GitHub.copilot-chat",
 		"golang.go",
 		"grapecity.gc-excelviewer",
+		"jebbs.plantuml",
 		"ms-dotnettools.csharp",
 		"ms-python.python",
 		"ms-toolsai.jupyter",
 		"ms-vscode.vscode-typescript-next",
 		"oven.bun-vscode",
-		"jebbs.plantuml",
 		"Prisma.prisma",
-		"VisualStudioExptTeam.vscodeintellicode",
 		"yoavbls.pretty-ts-errors"
 	]
 }
