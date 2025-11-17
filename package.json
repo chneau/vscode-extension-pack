@@ -35,7 +35,7 @@
 		"upgrade": "bun update --latest; bun install --dev @types/vscode@1.99.0",
 		"publish": "bun run build && vsce package && vsce publish",
 		"all": "bun run upgrade; bun run check; bun run lint",
-		"check": "deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
+		"check": "rm -rf out; deno fmt --use-tabs --quiet; oxlint --fix-dangerously --quiet; timeout 3s biome check --write --unsafe .",
 		"lint": "tsc --noEmit"
 	},
 	"devDependencies": {
