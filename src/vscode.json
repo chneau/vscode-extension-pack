@@ -8,7 +8,9 @@
 		"**/obj/": true,
 		"**/bin/": true,
 		"**/node_modules/": true,
-		"**/.meteor/local/": true
+		"**/.meteor/local/": true,
+    "**/.venv/": true,
+    "**/__pycache__/": true
 	},
 	"github.copilot.enable": {
 		"*": true,
