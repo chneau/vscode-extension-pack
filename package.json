@@ -39,16 +39,17 @@
 		"lint": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@types/node": "^24.10.1",
+		"@types/node": "^25.0.3",
 		"@types/vscode": "1.99.0",
-		"@vscode/vsce": "^3.7.0",
-		"esbuild": "^0.27.0",
+		"@vscode/vsce": "^3.7.1",
+		"esbuild": "^0.27.2",
 		"typescript": "^5.9.3"
 	},
 	"extensionPack": [
 		"biomejs.biome",
 		"chneau.resource-monitor",
 		"chneau.saturated-dark-modern",
+		"cweijan.vscode-office",
 		"dakara.transformer",
 		"esbenp.prettier-vscode",
 		"GitHub.copilot-chat",
