@@ -9,6 +9,7 @@
 		"**/bin/": true,
 		"**/node_modules/": true,
 		"**/.meteor/local/": true,
+		"**/.ruff_cache/": true,
 		"**/.venv/": true,
 		"**/__pycache__/": true
 	},
