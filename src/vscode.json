@@ -70,6 +70,7 @@
 	"intellicodeApiExamples.typescript.enabled": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"notebook.formatOnSave.enabled": true,
+	"python.terminal.activateEnvironment": false,
 	"security.promptForRemoteFileProtocolHandling": false,
 	"security.workspace.trust.enabled": false,
 	"telemetry.telemetryLevel": "off",
